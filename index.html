@@ -3,15 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Fireside - Sign Up</title>
+	<script	src="js/form_submit.js"></script>
 </head>
 <body>
 	<h3 id="slogan">Join us by the Fireside!</h3>
 	<div id="input-box">
-		<form id="registration detail">
+		<form id="registration detail" action="javascript:sendit()">
 			<label for="user-alias">Alias</label><br>
-			<input type="text" id="user-alias"><br>
+			<input type="text" id="user-alias" required><br>
 			<label for="user-phone">Phone Number</label><br>
-			<input type="text" id="user-phone"><br>
+			<input type="tel" id="user-phone" required><br>
 			<input type="submit" id="user-form-submit" value="Join">
 		</form>
 	</div>
