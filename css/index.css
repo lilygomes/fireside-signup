@@ -1,7 +1,11 @@
-
 @font-face {
     font-family: "Font Awesome";
-    src: url("../assets/fontawesome-webfont.woff2");
+    src: url("../assets/fontawesome-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Goudy Book Letter";
+    src: url("../assets/fontawesome-webfont.woff2") format("woff2");
 }
 
 body {

@@ -5,18 +5,37 @@
 	<title>Fireside - Sign Up</title>
 	<script	src="js/form_submit.js"></script>
 	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
 </head>
 <body>
-	<h3 id="slogan">Join us by the Fireside!</h3>
-	<div id="input-box">
-		<form id="registration detail" action="javascript:sendit()">
-			<label for="user-alias">Alias<br><a class="tiny">6 to 15 characters, letters & numbers only</a></label><br>
-			<input type="text" id="user-alias" pattern="^[\w*\d*]{6,15}$" required><br>
-			<label for="user-phone">Phone Number</label><br>
-			<input type="tel" id="user-phone" required><br>
-			<input type="submit" id="user-form-submit" value="Join">
-		</form>
+	<div id="registration" class="main-section">
+		<h3 id="slogan">Join us by the Fireside!</h3>
+		<div id="input-box">
+			<form id="registration detail" action="javascript:sendit()">
+				<label for="user-alias">Alias<br><a class="tiny">6 to 15 characters, letters & numbers only</a></label><br>
+				<input type="text" id="user-alias" pattern="^[\w*\d*]{6,15}$" required><br>
+				<label for="user-phone">Phone Number</label><br>
+				<input type="tel" id="user-phone" required><br>
+				<input type="submit" id="user-form-submit" value="Join">
+			</form>
+		</div>
+	</div>
+	<div id="success">
+		<h3 id="congrats">Welcome!</h3>
+		<p>
+			We're glad to have you by the Fireside! To let people start conversations with you, have them text
+		</p>
+		<h4 id="twilio-number">978-581-1148</h4>
+		<p>
+			Tell them to use your alias:
+		</p>
+		<h4 id=""></h4>
+		</div>
+		<div id="fail">
+		<h4 id="fail-header">Sorry, that didn't work.</h4>
+		<p>
+			We encountered an error trying to register you. To get things squared away, email our support and give them this code:
+		</p>
+		<h4 id="error-code"></h4>
 	</div>
 </body>
 </html>
