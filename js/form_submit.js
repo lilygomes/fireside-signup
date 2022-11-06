@@ -2,10 +2,10 @@ function sendit() {
     const alias = document.getElementById("user-alias").innerText;
     const number = document.getElementById("user-phone").innerText;
 
-    const endpoint = "http://sms.firesidechat.tech:8000/sms"
+    const endpoint = "http://sms.firesidechat.tech:8000/reg"
     const params = {
-        user_alias : alias,
-        user_number : number
+        "alias" : alias,
+        "number" : number
     }
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
