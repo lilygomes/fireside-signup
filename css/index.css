@@ -1,4 +1,22 @@
+
+@font-face {
+    font-family: "Font Awesome";
+    src: url("../assets/fontawesome-webfont.woff2");
+}
+
 body {
+    background-image: url("../assets/campfire.jpg");
+    background-size: cover;
+
+    font-family: "Font Awesome", sans-serif;
+    color: white;
+
+    text-shadow: rgba(0, 0, 0, 0.7) 0 1px 3px;
+}
+
+h3 {
+    font-family: "Goudy Book Letter", serif;
+    color: white;
 }
 
 .tiny {

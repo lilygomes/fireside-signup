@@ -14,16 +14,17 @@ function sendit() {
         if (xhr.readyState === 4) {
                 switch (xhr.response) {
                     case "success":
-                        // TODO redirect to success page
                         console.log("Successfully registered user " + alias)
+                        window.location = "success.html"
+                        document.getElementById("user-alias").innerText = user_alias
                         break
                     case "user_exists":
                         // TODO say name exists
                         break
                     default:
-                        // TODO oops email support
-                        // code: [response]
                         console.log("Unknown server response: " + xhr.response + ", registration halted")
+                        window.location = "fail.html"
+                        document.getElementById("error-code").innerText = xhr.response
                 }
         }
     }
@@ -32,8 +33,4 @@ function sendit() {
     xhr.setRequestHeader("Content-Type", "application/json")
     console.log("param:" + params)
     xhr.send(params)
-}
-
-function getMatch() {
-    console.log(document.getElementById("user-alias").innerText.match())
 }
