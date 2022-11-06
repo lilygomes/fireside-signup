@@ -7,6 +7,8 @@ function sendit() {
         "alias" : alias,
         "number" : number
     }
+    console.log("alias is: " + alias)
+    console.log("number is: " + number)
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
@@ -28,6 +30,7 @@ function sendit() {
 
     xhr.open("POST", endpoint)
     xhr.setRequestHeader("Content-Type", "application/json")
+    console.log("param:" + param)
     xhr.send(params)
 }
 
