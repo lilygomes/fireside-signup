@@ -29,7 +29,7 @@ function sendit() {
     }
 
     xhr.open("POST", endpoint)
-    xhr.setRequestHeader("Content-Type", "application/json")
+    xhr.setRequestHeader("Content-Type", "text/plain")
     console.log("param:" + params)
     xhr.send(params)
 }
