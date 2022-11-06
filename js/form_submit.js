@@ -2,7 +2,7 @@ function sendit() {
     const alias = document.getElementById("user-alias").innerText;
     const number = document.getElementById("user-phone").innerText;
 
-    const endpoint = "http://sms.firesidechat.tech:8000/reg"
+    const endpoint = "https://sms.firesidechat.tech:8000/reg"
     const params = {
         "alias" : alias,
         "number" : number
