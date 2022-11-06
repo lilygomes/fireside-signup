@@ -7,16 +7,15 @@ function sendit() {
         "user_alias" : user_alias,
         "user_number" : "+" + user_phone
     })
-    console.log("alias is: " + user_alias)
-    console.log("number is: " + user_phone)
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
                 switch (xhr.response) {
                     case "success":
-                        console.log("Successfully registered user " + alias)
-                        window.location = "success.html"
-                        document.getElementById("user-alias").innerText = user_alias
+                        console.log("Successfully registered user " + user_alias)
+                        document.getElementById("registration").style.visibility = "hidden"
+                        document.getElementById("success").style.visibility = "visible"
+                        document.getElementById("created-alias").innerText = user_alias
                         break
                     case "user_exists":
                         // TODO say name exists

@@ -23,6 +23,16 @@ h3 {
     color: white;
 }
 
-.tiny {
+.main-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+#success {
+    visibility: hidden;
+}
+
+#fail {
+    visibility: hidden;
 }
