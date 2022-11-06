@@ -30,3 +30,7 @@ function sendit() {
     xhr.setRequestHeader("Content-type", "application/json")
     xhr.send(params)
 }
+
+function getMatch() {
+    console.log(document.getElementById("user-alias").innerText.match())
+}
