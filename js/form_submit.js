@@ -1,5 +1,5 @@
 function sendit() {
-    const alias = document.getElementById("user-alias").valueOf().toLowerCase()
+    const alias = document.getElementById("user-alias").valueOf()
     const number = document.getElementById("user-phone").valueOf()
 
     const endpoint = "https://sms.firesidechat.tech:8000/reg"
