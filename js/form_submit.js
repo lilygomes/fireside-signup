@@ -10,12 +10,19 @@ function sendit() {
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
-            if (xhr.response === "200") {
-                console.log("hey, it worked!")
-                // TODO redirect to success page
-            } else {
-                // TODO redirect to fail page
-            }
+                switch (xhr.response) {
+                    case "success":
+                        // TODO redirect to success page
+                        console.log("Successfully registered user " + alias)
+                        break
+                    case "user_exists":
+                        // TODO say name exists
+                        break
+                    default:
+                        // TODO oops email support
+                        // code: [response]
+                        console.log("Unknown server response: " + xhr.response + ", registration halted")
+                }
         }
     }
 
