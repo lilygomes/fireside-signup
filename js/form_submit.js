@@ -7,8 +7,8 @@ function sendit() {
         alias : user_alias,
         number : user_phone
     })
-    console.log("alias is: " + alias)
-    console.log("number is: " + number)
+    console.log("alias is: " + user_alias)
+    console.log("number is: " + user_phone)
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
