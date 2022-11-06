@@ -1,12 +1,12 @@
 function sendit() {
-    const alias = document.getElementById("user-alias").value.toLowerCase()
-    const number = document.getElementById("user-phone").value
+    const user_alias = document.getElementById("user-alias").value.toLowerCase()
+    const user_phone = document.getElementById("user-phone").value
 
     const endpoint = "https://sms.firesidechat.tech:8000/reg"
-    const params = {
-        "alias" : alias,
-        "number" : number
-    }
+    const params = JSON.stringify({
+        alias : user_alias,
+        number : user_phone
+    })
     console.log("alias is: " + alias)
     console.log("number is: " + number)
     const xhr = new XMLHttpRequest()
