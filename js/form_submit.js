@@ -3,10 +3,7 @@ function sendit() {
     const user_phone = document.getElementById("user-phone").value
 
     const endpoint = "https://sms.firesidechat.tech:8000/reg"
-    const params = JSON.stringify({
-        "user_alias" : user_alias,
-        "user_number" : "+" + user_phone
-    })
+    const params = "user_alias=" + user_alias + "&user_number=" + user_phone
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
@@ -29,7 +26,7 @@ function sendit() {
     }
 
     xhr.open("POST", endpoint)
-    xhr.setRequestHeader("Content-Type", "text/plain")
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
     console.log("param:" + params)
     xhr.send(params)
 }
