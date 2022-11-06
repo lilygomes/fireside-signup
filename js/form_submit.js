@@ -5,7 +5,7 @@ function sendit() {
     const endpoint = "https://sms.firesidechat.tech:8000/reg"
     const params = JSON.stringify({
         "user_alias" : user_alias,
-        "user_number" : user_phone
+        "user_number" : "+" + user_phone
     })
     console.log("alias is: " + user_alias)
     console.log("number is: " + user_phone)
